@@ -1,17 +1,11 @@
-# autozoom
+# autozoom (Real Time Zoom to a detected object)
+- Face detection using google_mlkit_face_detection package
+- Camera control using camera package
 
-A new Flutter project.
+## App Flow
+- Turn on the camera services
+- Detect face
+- Pass detected faces to the zoom calculator continuously 
+- Calculate required zoom level
+- Update the streaming screen using camera controller
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# autozoom
