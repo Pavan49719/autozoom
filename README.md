@@ -16,6 +16,8 @@ Auto zoom to 70% (front camera) | Auto zoom to 46% (Back camera) | Auto zoom to 
 # autozoom (Real Time Zoom to a detected object)
 - Face detection using google_mlkit_face_detection package
 - Camera control using camera package
+- Zoom is based on each previous frame to increase accuracy
+- After each frame zoom level is getting calculated and passed to a zoom controller.
 
 ## App Flow
 - Turn on the camera services
