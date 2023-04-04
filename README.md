@@ -18,7 +18,7 @@ Auto zoom to 70% (front camera) | Auto zoom to 46% (Back camera) | Auto zoom to 
 - After each frame zoom level is getting calculated and passed to a camera controller.
 - Update the streaming screen using camera controller
 
-| Approach 1 | Approach 1 |
+| Approach 1 | Approach 2 |
 | --- | --- |
 | Zoom value is based on each previous frame | Zoom value is based on the first detected frame |
 | It calculates zoom value by comparing regionHeight and regionWidth with screenHeight and screenWidth | It calculates zoom value by a mathematical formula which involves, regionHeight, regionWidth, screenHeight, screenWidth |
