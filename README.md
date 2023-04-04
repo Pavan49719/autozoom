@@ -10,19 +10,26 @@ Auto zoom to 70% (front camera) | Auto zoom to 46% (Back camera) | Auto zoom to 
 
 
 
-
-
-
-# autozoom (Real Time Zoom to a detected object)
-- Face detection using google_mlkit_face_detection package
-- Camera control using camera package
-- Zoom is based on each previous frame to increase accuracy
-- After each frame zoom level is getting calculated and passed to a zoom controller.
-
 ## App Flow
-- Turn on the camera services
-- Detect face
-- Pass detected faces to the zoom calculator continuously 
-- Calculate required zoom level
+- Turn on the camera services using camera package
+- Detect face using google_mlkit_face_detection package
+- Pass detected faces to the zoom calculator continuously
+- Zoom is based on each previous frame to increase accuracy
+- After each frame zoom level is getting calculated and passed to a camera controller.
 - Update the streaming screen using camera controller
+
+| Approach 1 | Approach 1 |
+| --- | --- |
+| Zoom value is based on each previous frame | Zoom value is based on the first detected frame |
+| It calculates zoom value by comparing regionHeight and regionWidth with screenHeight and screenWidth | It calculates zoom value by a mathematical formula which involves, regionHeight, regionWidth, screenHeight, screenWidth |
+| Zoom level is adjusted seamlessly even when the camera is moved forward or backward.
+Which ensures real time auto zoom adjustment feature. | Zoom level is adjusted with very less accuracy when the camera is moved.
+Real time auto zoom adjustment feature doesn't work well here. |
+| This approach is also faster but not as of approach 2 because it involves continuous comparison for each new frame. | This approach is very faster in time because it involves mathematical formula |
+| Accuracy is high for both nearer and distant objects. | Less accurate for nearer objects. |
+
+### I preferred approach 1 because it gives real time features with more accuracy.
+
+
+
 
