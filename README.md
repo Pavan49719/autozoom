@@ -22,9 +22,7 @@ Auto zoom to 70% (front camera) | Auto zoom to 46% (Back camera) | Auto zoom to 
 | --- | --- |
 | Zoom value is based on each previous frame | Zoom value is based on the first detected frame |
 | It calculates zoom value by comparing regionHeight and regionWidth with screenHeight and screenWidth | It calculates zoom value by a mathematical formula which involves, regionHeight, regionWidth, screenHeight, screenWidth |
-| Zoom level is adjusted seamlessly even when the camera is moved forward or backward.
-Which ensures real time auto zoom adjustment feature. | Zoom level is adjusted with very less accuracy when the camera is moved.
-Real time auto zoom adjustment feature doesn't work well here. |
+| Zoom level is adjusted seamlessly even when the camera is moved forward or backward. Which ensures real time auto zoom adjustment feature. | Zoom level is adjusted with very less accuracy when the camera is moved. Real time auto zoom adjustment feature doesn't work well here. |
 | This approach is also faster but not as of approach 2 because it involves continuous comparison for each new frame. | This approach is very faster in time because it involves mathematical formula |
 | Accuracy is high for both nearer and distant objects. | Less accurate for nearer objects. |
 
